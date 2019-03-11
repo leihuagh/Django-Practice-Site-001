@@ -1,9 +1,71 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block head_title %}
 Contact Us
 {% endblock head_title %}
 
+{% block local_css %}
+<link href="{% static 'css/form-validation.css' %}" rel="stylesheet">
+{% endblock local_css %}
+
 {% block main_contents %}
-<h1>Contact Us</h1>
-{% endblock main_contents %}
+<div class="container">
+    <div class="py-5 text-center">
+        <h2>Contact Us</h2>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 order-md-2 mb-4">
+        </div>
+        <div class="col-md-6 order-md-1">
+            <h4 class="mb-3">Billing address</h4>
+            <form class="needs-validation" novalidate>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="firstName">First name</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                        <div class="invalid-feedback">
+                            Valid first name is required.
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="lastName">Last name</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                        <div class="invalid-feedback">
+                            Valid last name is required.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                    <div class="invalid-feedback">
+                        Please enter a valid email address for shipping updates.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="subject">Subject</label>
+                    <select id="subject" class="form-control">
+                        <option value="0">Choose One ...</option>
+                        <option value="1">Subjecr 1</option>
+                        <option value="2">Subjecr 2</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <div class="form-group">
+                        <label for="content">Content</label>
+                        <textarea class="form-control" id="content" rows="3"></textarea>
+                    </div>
+                </div>
+
+
+                <hr class="mb-4">
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+            </form>
+        </div>
+    </div>
+    {% endblock main_contents %}
