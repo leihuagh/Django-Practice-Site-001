@@ -53,11 +53,14 @@ Contact Us
 
                 <div class="mb-3">
                     <label for="subject">Subject</label>
-                    <select id="subject" class="form-control">
-                        <option value="0">Choose One ...</option>
-                        <option value="1">Subjecr 1</option>
-                        <option value="2">Subjecr 2</option>
+                    <select class="custom-select d-block w-100" id="subject" required>
+                        <option value="">Choose One...</option>
+                        <option>Subject 1</option>
+                        <option>Subject 2</option>
                     </select>
+                    <div class="invalid-feedback">
+                        Please select a valid subject.
+                    </div>
                 </div>
 
                 <div class="mb-3">
