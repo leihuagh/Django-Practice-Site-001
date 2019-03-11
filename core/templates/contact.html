@@ -7,6 +7,7 @@ Contact Us
 
 {% block local_css %}
 <link href="{% static 'css/form-validation.css' %}" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/maps/location.css' %}">
 {% endblock local_css %}
 
 {% block main_contents %}
@@ -17,6 +18,10 @@ Contact Us
 
     <div class="row">
         <div class="col-md-6 order-md-2 mb-4">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-muted">Find Us in Map</span>
+            </h4>
+            <div id="map"></div>
         </div>
         <div class="col-md-6 order-md-1">
             <h4 class="mb-3">Billing address</h4>
@@ -64,8 +69,12 @@ Contact Us
 
 
                 <hr class="mb-4">
-                <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Submit Us Your Feedback</button>
             </form>
         </div>
     </div>
     {% endblock main_contents %}
+
+    {% block local_js %}
+    <script src="{% static 'js/maps/location.js' %}"></script>
+    {% endblock local_js %}
