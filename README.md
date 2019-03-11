@@ -22,6 +22,7 @@
 ### Apps
 
 - core
+- accounts
 
 ## Commands Used in Project
 
